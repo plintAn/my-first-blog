@@ -10,4 +10,6 @@ def post_detail(request, pk):
 urlpatterns = [
     path('', views.post_list, name='post_list'),
     path('post/<int:pk>/', post_detail, name='post_detail'),  # views.post_detail에서 post_detail로 변경
+    path('post/new', views.post_new, name='post_new'),
+    path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
 ]
